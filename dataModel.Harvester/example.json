@@ -1,0 +1,17 @@
+{
+  "id": "urn:ngsi-ld:Harvester:JD-S700-20250625",
+  "type": "Harvester",
+  "location": {
+    "type": "Point",
+    "coordinates": [10.7865, 44.6488]
+  },
+  "operationalStatus": "active",
+  "model": "S700",
+  "manufacturer": "John Deere",
+  "fuelConsumption": 18.5,
+  "yieldRate": 4200.5,
+  "grainMoisture": 13.2,
+  "engineTemperature": 87.6,
+  "speed": 7.2,
+  "timestamp": "2025-06-25T11:45:00Z"
+}

@@ -1,0 +1,65 @@
+model:
+  name: Harvester
+  domain: AgriFood
+  description: |
+    A Smart Data Model representing a harvesting machine (cosechadora) used in precision agriculture.
+    It includes geolocation, operational status, model, manufacturer, harvesting metrics such as yield rate
+    and grain moisture, telemetry data (engine temperature, speed), and fuel consumption.
+
+  dataModelTags:
+    - agriculture
+    - smart-farming
+    - machinery
+    - telemetry
+    - precision-agriculture
+
+  version: 0.1.0
+  contributors:
+    - name: Francisco Rojas
+      email: tito_paco@hotmail.com
+      github: https://github.com/franciscorojas77
+  license: MIT
+
+  derivedFrom: []
+  references: []
+  created: 2025-06-25
+  lastUpdated: 2025-06-25
+
+  properties:
+    location:
+      description: Geographic location of the harvester.
+      type: GeoProperty
+      units: WGS84 coordinates
+    operationalStatus:
+      description: Current status of the machine (active, idle, off).
+      type: Property
+      allowedValues: [active, idle, off]
+    model:
+      description: Model name or code of the harvester.
+      type: Property
+    manufacturer:
+      description: Manufacturer name of the harvester.
+      type: Property
+    fuelConsumption:
+      description: Fuel consumption in liters per hour.
+      type: Property
+      units: LTR
+    yieldRate:
+      description: Crop yield rate in kilograms per hour.
+      type: Property
+      units: KGMH
+    grainMoisture:
+      description: Grain moisture percentage.
+      type: Property
+      units: P1
+    engineTemperature:
+      description: Engine temperature in degrees Celsius.
+      type: Property
+      units: CEL
+    speed:
+      description: Current speed in kilometers per hour.
+      type: Property
+      units: KMH
+    timestamp:
+      description: ISO 8601 timestamp of the last observation or update.
+      type: Property

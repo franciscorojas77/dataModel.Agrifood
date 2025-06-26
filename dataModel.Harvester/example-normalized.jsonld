@@ -1,0 +1,64 @@
+{
+  "id": "urn:ngsi-ld:Harvester:JD-S700-20250625",
+  "type": "Harvester",
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [10.7865, 44.6488]
+    }
+  },
+  "operationalStatus": {
+    "type": "Property",
+    "value": "active"
+  },
+  "model": {
+    "type": "Property",
+    "value": "S700"
+  },
+  "manufacturer": {
+    "type": "Property",
+    "value": "John Deere"
+  },
+  "fuelConsumption": {
+    "type": "Property",
+    "value": 18.5,
+    "unitCode": "LTR"
+  },
+  "yieldRate": {
+    "type": "Property",
+    "value": 4200.5,
+    "unitCode": "KGMH"
+  },
+  "grainMoisture": {
+    "type": "Property",
+    "value": 13.2,
+    "unitCode": "P1"
+  },
+  "engineTemperature": {
+    "type": "Property",
+    "value": 87.6,
+    "unitCode": "CEL"
+  },
+  "speed": {
+    "type": "Property",
+    "value": 7.2,
+    "unitCode": "KMH"
+  },
+  "timestamp": {
+    "type": "Property",
+    "value": "2025-06-25T11:45:00Z"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    {
+      "Harvester": "https://example.org/Harvester",
+      "operationalStatus": "https://example.org/operationalStatus",
+      "yieldRate": "https://example.org/yieldRate",
+      "grainMoisture": "https://example.org/grainMoisture",
+      "engineTemperature": "https://example.org/engineTemperature",
+      "fuelConsumption": "https://example.org/fuelConsumption",
+      "speed": "https://example.org/speed"
+    }
+  ]
+}

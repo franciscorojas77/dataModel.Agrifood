@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "Harvester",
+  "description": "Smart Data Model for a harvesting machine used in precision agriculture.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "format": "uri", "description": "Unique identifier of the entity" },
+    "type": { "type": "string", "enum": ["Harvester"] },
+    "location": {
+      "type": "object",
+      "description": "Current location of the harvester",
+      "properties": {
+        "type": { "type": "string", "enum": ["Point"] },
+        "coordinates": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": ["type", "coordinates"]
+    },
+    "operationalStatus": {
+      "type": "string",
+      "enum": ["active", "idle", "off"],
+      "description": "Current operational state"
+    },
+    "model": { "type": "string", "description": "Model name of the harvester" },
+    "manufacturer": { "type": "string", "description": "Manufacturer name" },
+    "fuelConsumption": {
+      "type": "number",
+      "description": "Fuel consumption in liters per hour",
+      "minimum": 0
+    },
+    "yieldRate": {
+      "type": "number",
+      "description": "Yield rate in kilograms per hour",
+      "minimum": 0
+    },
+    "grainMoisture": {
+      "type": "number",
+      "description": "Grain moisture percentage",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "engineTemperature": {
+      "type": "number",
+      "description": "Engine temperature in Celsius",
+      "minimum": -40
+    },
+    "speed": {
+      "type": "number",
+      "description": "Current speed in km/h",
+      "minimum": 0
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the last update"
+    }
+  },
+  "required": ["id", "type", "location", "operationalStatus", "timestamp"]
+}
